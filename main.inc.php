@@ -36,4 +36,4 @@ class PluginMaintain extends BasePluginMaintain
 {
 }
 
-include_once(__DIR__.'/functions_dblayer.inc.php');
+include_once(__DIR__.'/include/functions_dblayer.inc.php');
