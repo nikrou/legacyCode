@@ -1,7 +1,7 @@
 <?php
 // +-----------------------------------------------------------------------+
 // | legacyCode - A plugin for phyxo to inject deprecated code             |
-// | Copyright(C) 2014 Nicolas Roudaire             http://www.nikrou.net/ |
+// | Copyright(C) 2014-2015 Nicolas Roudaire        http://www.nikrou.net/ |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -310,19 +310,23 @@ function do_maintenance_all_tables() {
 function simple_hash_from_query($query, $keyname, $valuename) {
     global $conn;
 
-    return $conn->simple_hash_from_query($query, $keyname, $valuename);
+    return $conn->query2array($query, $keyname, $valuename);
 }
 
 function hash_from_query($query, $keyname) {
     global $conn;
 
-    return $conn->hash_from_query($query, $keyname);
+    return $conn->query2array($query, $keyname);
 }
 
 function array_from_query($query, $fieldname=false) {
     global $conn;
 
-    return $conn->array_from_query($query, $fieldname);
+    if ($fieldname===false) {
+		return $conn->query2array($query);
+    } else {
+		return $conn->query2array($query, null, $fieldname);
+    }
 }
 
 function pwg_db_get_flood_period_expression($seconds) {

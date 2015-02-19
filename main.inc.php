@@ -1,7 +1,7 @@
 <?php
 // +-----------------------------------------------------------------------+
 // | legacyCode - A plugin for phyxo to inject deprecated code             |
-// | Copyright(C) 2014 Nicolas Roudaire             http://www.nikrou.net/ |
+// | Copyright(C) 2014-2015 Nicolas Roudaire        http://www.nikrou.net/ |
 // +-----------------------------------------------------------------------+
 // | This program is free software; you can redistribute it and/or modify  |
 // | it under the terms of the GNU General Public License version 2 as     |
@@ -20,7 +20,7 @@
 
 /*
 Plugin Name: legacyCode
-Version: 0.1.0
+Version: 0.2.0
 Description: Legacy code for deprecated functions/classes used by plugins
 Author: Nicolas Roudaire
 Author URI: http://www.nikrou.net
